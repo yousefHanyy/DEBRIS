@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>
+      DEBRIS - Detection and Exploration for Rescue, Investgation and Survival
+    </title>
+    <!-- 
+      (1)Designing the main portion of the page (Assuming the website consists of one page):
+
+          |> Dividing the page into three portions (three divs):
+              ||> First portion should be the header:
+                  |||> 1-Create a main div as a container.
+                      ||||> -Add a h1 indicating the name of the project.
+                      ||||> -<Under it a quick one line summary in a 'p' tag.
+                      ||||> -Maybe a background image related to the project context (NOT RECOMMENDED FOR AS MUCH PERFORMANCE BOOST AS POSSIBLE).
+
+              ||> Second portion is for both the live stream & the camera images(normal or thermal):
+
+              ||> Third portion is for the sensor readings:
+                  |||> 1-Create a main div as a container.
+                      ||||> -The display style should be flex and should wrap.
+                  |||> 2-Create as much divs as needed for the readings in the container.
+                      ||||> -Each readings div should have a name and the specified number (preferably add an icon indicating each one).
+                            |||||> -Temperature readings.
+                            |||||> -Pressure readings.
+                            |||||> -Humidity readings.
+                            |||||> -Doppler reading (motion detection).
+                            |||||> -Final conclusion by the AI model if a body is found.
+     -->
+  </head>
+  <body>
+    <header>
+      <h1>
+        <strong
+          >DEBRIS - Detection and Exploration for Rescue, Investgation and
+          Survival</strong
+        >
+      </h1>
+      <p>
+        An advanced robotic system designed for navigating challenging
+        environments to aid in rescue operations, investigations, and survival
+        scenarios. Equipped with sensors and a camera, DEBRIS gathers crucial
+        data and imagery, which is then transmitted to a central hub for
+        real-time analysis and decision-making. With its versatile capabilities,
+        DEBRIS plays a vital role in enhancing situational awareness and
+        facilitating effective responses in emergency situations.
+      </p>
+    </header>
+    <main>
+      <div class="imagery">
+        <!-- 
+          ! Haven't yet designed the stream and camera layouts proportioning.
+         -->
+      </div>
+      <div class="readings-container">
+        <div class="readings">Temperature</div>
+        <div class="readings">Pressure</div>
+        <div class="readings">Humidity</div>
+        <div class="readings">Doppler (motion detection)</div>
+        <div class="readings">Conclusion</div>
+        <!--? Not settled on this reading's name yet-->
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

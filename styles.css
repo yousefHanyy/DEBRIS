@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+header {
+  padding: 20px;
+  margin: 0;
+  background-color: #ecf3f7;
+  color: #3f5592;
+}
+h1,
+h3 {
+  max-width: 1200px;
+}
+h1 {
+  font-size: 40px;
+  text-align: center;
+  margin: 0 auto;
+}
+h3 {
+  font-weight: 500;
+  margin: 10px auto;
+}
+.imagery {
+  min-height: 400px;
+  background-color: #ffff;
+}
+@media (min-width: 40em) {
+  .readings-container {
+    display: flex;
+    /* gap: 40px; */
+    justify-content: space-around;
+  }
+}

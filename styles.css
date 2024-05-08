@@ -32,7 +32,6 @@ h3 {
 @media (min-width: 40em) {
   .readings-container {
     display: flex;
-    /* gap: 40px; */
     justify-content: space-around;
   }
 }

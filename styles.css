@@ -5,11 +5,16 @@
 body {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
+
 header {
   padding: 20px;
   margin: 0;
-  background-color: #ecf3f7;
+  background-color: #f9f9f9;
   color: #3f5592;
 }
 h1,
@@ -26,12 +31,38 @@ h3 {
   margin: 10px auto;
 }
 .imagery {
-  min-height: 400px;
-  background-color: #ffff;
+  min-height: 70vh;
+  background-color: #e5e7eb;
+}
+.readings-container {
+  background-color: #f9f9f9;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.readings {
+  min-height: 250px;
+  max-width: 250px;
+  text-align: center;
+  margin: 10px auto;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.288) 0px 5px 15px;
+  padding: 10px;
+}
+.readings-title > h4 {
+  font-size: 20px;
+  margin: 0 auto;
+  color: #3f5592;
+  font-weight: bold;
 }
 @media (min-width: 40em) {
   .readings-container {
     display: flex;
     justify-content: space-around;
+  }
+  .readings {
+    flex: 1 1 250px;
+    gap: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
   }
 }

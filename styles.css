@@ -98,3 +98,7 @@ h1 {
   max-width: 1200px;
   border: none;
 }
+#map {
+  min-height: 500px;
+  width: 100%;
+}

@@ -62,26 +62,30 @@
       <section class="readings-container">
         <article class="readings">
           <h2 class="readings-title">Temperature</h2>
-          <p class="readings-value">&deg;C</p>
+          <p class="readings-value" id="temperature"></p>
         </article>
         <article class="readings">
           <h2 class="readings-title">Pressure</h2>
-          <p class="readings-value">1013 hPa</p>
+          <p class="readings-value" id="pressure"></p>
         </article>
         <article class="readings">
           <h2 class="readings-title">Humidity</h2>
-          <p class="readings-value">%</p>
+          <p class="readings-value" id="humidity"></p>
         </article>
         <article class="readings">
           <h2 class="readings-title">Doppler</h2>
-          <p class="readings-value">m/s</p>
+          <p class="readings-value" id="doppler"></p>
         </article>
         <article class="readings">
           <h2 class="readings-title">Conclusion</h2>
           <!--? Not settled on this reading's name yet-->
         </article>
       </section>
+    </section>
+    <section id="map">
+    </section>
     </main>
     <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw1rYfgwgvNunIChSCTrTLahpi7f91dVo&callback=initMap" async defer></script>
   </body>
 </html>

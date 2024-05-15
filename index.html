@@ -7,7 +7,7 @@
     <title>
       DEBRIS - Detection and Exploration for Rescue, Investgation and Survival
     </title>
-    <!-- 
+     <!-- 
       (1)Designing the main portion of the page (Assuming the website consists of one page):
 
           |> Dividing the page into three portions (three divs):
@@ -61,19 +61,19 @@
       </section>
       <section class="readings-container">
         <article class="readings">
-          <h2 class="readings-title">Temperature</h2>
+          <h2 class="readings-title" id="temperature">Temperature</h2>
           <p class="readings-value">&deg;C</p>
         </article>
         <article class="readings">
-          <h2 class="readings-title">Pressure</h2>
+          <h2 class="readings-title" id="pressure">Pressure</h2>
           <p class="readings-value">1013 hPa</p>
         </article>
         <article class="readings">
-          <h2 class="readings-title">Humidity</h2>
+          <h2 class="readings-title" id="humidity">Humidity</h2>
           <p class="readings-value">%</p>
         </article>
         <article class="readings">
-          <h2 class="readings-title">Doppler</h2>
+          <h2 class="readings-title" id="doppler">Doppler</h2>
           <p class="readings-value">m/s</p>
         </article>
         <article class="readings">
@@ -82,6 +82,9 @@
         </article>
       </section>
     </main>
-    <script src="script.js"></script>
+    <div id="map">
+  </div>
+  <script src="script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw1rYfgwgvNunIChSCTrTLahpi7f91dVo&callback=initMap" async defer></script>
   </body>
 </html>

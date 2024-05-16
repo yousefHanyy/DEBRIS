@@ -8,7 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  height: 100%;
 }
 header {
   padding: 20px;
@@ -21,7 +21,6 @@ h1,
 p {
   max-width: 1200px;
   font-weight: 500;
-  margin: 10px auto;
 }
 
 h1 {
@@ -29,13 +28,33 @@ h1 {
   text-align: center;
   margin: 0 auto;
 }
+p {
+  margin: 10px auto;
+}
 .imagery {
   min-height: 70vh;
   background-color: #e5e7eb;
 }
+
+.live-stream {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 20px;
+  background-color: #e5e7eb;
+  width: 100%;
+  height: auto;
+}
+
+.live-stream iframe {
+  width: 100%;
+  min-height: 70vh;
+  max-width: 1200px;
+  border: none;
+}
 .readings-container {
   background-color: #f9f9f9;
-  padding: 25px 50px;
+  padding: 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -55,12 +74,6 @@ h1 {
   background: linear-gradient(145deg, #ececec, #f9f9f9);
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
-.readings:hover {
-  transform: translateY(-5px);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 20px;
-}
-
 .readings-title {
   font-size: clamp(22px, 2vw, 28px);
   margin: 0 5px;
@@ -72,31 +85,30 @@ h1 {
   margin: auto 0;
   color: #333;
 }
+.readings:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 20px;
+}
 
 @media (min-width: 40em) {
-  .readings-container {
+  body .readings-container {
     justify-content: space-around;
+    padding: 25px 50px;
   }
   .readings {
     flex: 1 1 250px;
   }
+  body .map-container {
+    padding: 0px 50px 25px 50px;
+  }
 }
 
-.live-stream {
+.map-container {
   display: flex;
+  padding: 0px 10px 10px 10px;
   justify-content: center;
   align-items: center;
-  padding: 25px 20px;
-  background-color: #e5e7eb;
-  width: 100%;
-  height: auto;
-}
-
-.live-stream iframe {
-  width: 100%;
-  min-height: 70vh;
-  max-width: 1200px;
-  border: none;
+  background-color: #f9f9f9;
 }
 #map {
   min-height: 500px;

@@ -7,29 +7,6 @@
     <title>
       DEBRIS - Detection and Exploration for Rescue, Investgation and Survival
     </title>
-    <!-- 
-      (1)Designing the main portion of the page (Assuming the website consists of one page):
-
-          |> Dividing the page into three portions (three divs):
-              ||> First portion should be the header:
-                  |||> 1-Create a main div as a container.
-                      ||||> -Add a h1 indicating the name of the project.
-                      ||||> -<Under it a quick one line summary in a 'p' tag.
-                      ||||> -Maybe a background image related to the project context (NOT RECOMMENDED FOR AS MUCH PERFORMANCE BOOST AS POSSIBLE).
-
-              ||> Second portion is for both the live stream & the camera images(normal or thermal):
-
-              ||> Third portion is for the sensor readings:
-                  |||> 1-Create a main div as a container.
-                      ||||> -The display style should be flex and should wrap.
-                  |||> 2-Create as much divs as needed for the readings in the container.
-                      ||||> -Each readings div should have a name and the specified number (preferably add an icon indicating each one).
-                            |||||> -Temperature readings.
-                            |||||> -Pressure readings.
-                            |||||> -Humidity readings.
-                            |||||> -Doppler reading (motion detection).
-                            |||||> -Final conclusion by the AI model if a body is found.
-     -->
   </head>
   <body>
     <header>
@@ -81,11 +58,15 @@
           <!--? Not settled on this reading's name yet-->
         </article>
       </section>
-    </section>
-    <section id="map">
-    </section>
+      <section class="map-container">
+        <article id="map"></article>
+      </section>
     </main>
     <script src="script.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw1rYfgwgvNunIChSCTrTLahpi7f91dVo&callback=initMap" async defer></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw1rYfgwgvNunIChSCTrTLahpi7f91dVo&callback=initMap"
+      async
+      defer
+    ></script>
   </body>
 </html>

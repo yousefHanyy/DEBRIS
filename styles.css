@@ -89,6 +89,12 @@ p {
   transform: translateY(-5px);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 20px;
 }
+.icon {
+  width: 50px;
+  height: 50px;
+  fill: #3f5592;
+  margin-bottom: 10px;
+}
 
 @media (min-width: 40em) {
   body .readings-container {

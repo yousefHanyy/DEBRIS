@@ -22,7 +22,7 @@ body {
   padding: 10px;
   position: fixed;
   top: 0;
-  transition: top 0.6s ease;
+  transition: top 0.9s ease;
   width: 100%;
   z-index: 1000;
 }
@@ -41,7 +41,7 @@ body {
   overflow-y: auto;
   position: fixed;
   top: -15%;
-  transition: top 0.4s ease-in-out;
+  transition: top 0.3s ease-in-out;
   width: 100%;
   z-index: 999;
 }
@@ -62,18 +62,18 @@ body {
   top: 49px;
 }
 
-h1,
+.top-header h1,
 p {
   max-width: 1200px;
   font-weight: 500;
 }
 
-h1 {
+.top-header h1 {
   font-size: 100px;
   text-align: center;
   margin: 0 auto;
 }
-p {
+.top-header p {
   margin: 10px auto;
   text-align: center;
   font-size: 30px;
@@ -166,4 +166,10 @@ p {
 #map {
   min-height: 500px;
   width: 100%;
+}
+
+.about-sec {
+  padding-top: 50px;
+  margin: auto;
+  width: 50%;
 }

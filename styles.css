@@ -16,6 +16,17 @@ body {
   background-color: #f9f9f9;
   color: #3f5592;
 }
+.debris-img {
+  max-width: 130px;
+  margin: auto;
+  overflow: hidden;
+}
+.debris-img img {
+  width: 100%;
+  height: auto;
+}
+.header-content {
+}
 .navbar {
   background-color: #f9f9f9;
   color: white;
@@ -151,12 +162,12 @@ p {
   .readings {
     flex: 1 1 250px;
   }
-  body .map-container {
+  /* body .map-container {
     padding: 0px 50px 25px 50px;
-  }
+  } */
 }
 
-.map-container {
+/* .map-container {
   display: flex;
   padding: 0px 10px 10px 10px;
   justify-content: center;
@@ -166,7 +177,7 @@ p {
 #map {
   min-height: 500px;
   width: 100%;
-}
+} */
 .main-container {
   width: 100%;
   display: flex;

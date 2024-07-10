@@ -60,26 +60,40 @@ function initMap() {
   // to update robot location every 5 seconds
   setInterval(fetchRobotLocation, 5000);
 }
-function fetchSensorData() {
-  fetch("/api/sensor-data")
-    .then((response) => response.json())
-    .then((data) => {
-      document.getElementById("temperature").textContent = data.temperature
-        ? data.temperature + " °C"
-        : "N/A";
-      document.getElementById("pressure").textContent = data.pressure
-        ? data.pressure + " hPa"
-        : "N/A";
-      document.getElementById("humidity").textContent = data.humidity
-        ? data.humidity + " %"
-        : "N/A";
-      document.getElementById("doppler").textContent = data.doppler
-        ? data.doppler + " m/s"
-        : "N/A";
-    })
-    .catch((error) => {
-      console.error("Error fetching sensor data:", error);
-    });
-}
-setInterval(fetchSensorData, 5000);
-fetchSensorData();
+// function fetchSensorData() {
+//   fetch("http://192.168.1.19:5000/data_show")
+//     .then((response) => response.json())
+//     .then((data) => {
+//       console.log("Fetched data:", data);
+//       const clientData = data["ESP32_2"];
+//       if (clientData && clientData.length > 0) {
+//         const latestData = clientData[clientData.length - 1];
+//         console.log(latestData);
+//         document.getElementById("temperature").textContent =
+//           latestData.temperature !== undefined
+//             ? Math.round(latestData.temperature) + " °C"
+//             : "No Data detected";
+//         document.getElementById("pressure").textContent =
+//           latestData.bmp_pressure !== undefined
+//             ? latestData.bmp_pressure + " Pa"
+//             : "No Data detected";
+//         document.getElementById("humidity").textContent =
+//           latestData.humidity !== undefined
+//             ? latestData.humidity + " %"
+//             : "No Data detected";
+//         document.getElementById("doppler").textContent =
+//           latestData.motion !== undefined
+//             ? latestData.motion
+//             : "No Data detected";
+//         document.getElementById("Conclusion").textContent =
+//           latestData.conclusion !== undefined
+//             ? latestData.conclusion
+//             : "No Data detected";
+//       }
+//     })
+//     .catch((error) => {
+//       console.error("Error fetching sensor data:", error);
+//     });
+// }
+// setInterval(fetchSensorData, 100);
+// fetchSensorData();

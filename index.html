@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>
-      DEBRIS - Detection and Exploration for Rescue, Investgation and Survival
+      DEBRIS - Detection and Exploration Bot for Rescue, Investgation and
+      Survival
     </title>
   </head>
   <body>
@@ -26,7 +27,9 @@
           <h1>
             <strong>DEBRIS</strong>
           </h1>
-          <p>Detection and Exploration for Rescue, Investgation and Survival</p>
+          <p>
+            Detection and Exploration Bot for Rescue, Investgation and Survival
+          </p>
         </div>
       </div>
     </header>
@@ -34,9 +37,11 @@
       <section class="imagery">
         <article class="live-stream">
           <div class="live-container">
-            <img src="/live-stream" alt="Live stream of the robot camera" />
+            <img src="debris.png" alt="Live stream of the robot camera" />
           </div>
-          <div class="thermal-container"></div>
+          <div class="thermal-container">
+            <img src="debris.png" alt="" />
+          </div>
           <!-- <iframe
             src="https://www.youtube.com/embed/3vLtrubLtEY"
             frameborder="0"
@@ -83,9 +88,9 @@
           <p class="readings-value" id="conclusion"></p>
         </article>
       </section>
-      <!-- <section class="map-container">
+      <section class="map-container">
         <article id="map"></article>
-      </section> -->
+      </section>
     </main>
     <svg style="display: none">
       <symbol id="icon-temperature" viewBox="0 0 320 512">
@@ -114,11 +119,11 @@
         />
       </symbol>
     </svg>
-    <!-- <script
+    <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw1rYfgwgvNunIChSCTrTLahpi7f91dVo&callback=initMap"
       async
       defer
-    ></script> -->
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>

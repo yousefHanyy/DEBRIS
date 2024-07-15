@@ -37,27 +37,31 @@ window.onscroll = () => {
 };
 
 function initMap() {
-  var map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 0, lng: 0 },
-    zoom: 3,
-  });
+  const mapOptions = {
+    center: { lat: 31, lng: 31.37 },
+    zoom: 15,
+    mapTypeId: "satellite",
+  };
 
-  var marker = new google.maps.Marker({
-    position: { lat: 0, lng: 0 },
+  const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+  const marker = new google.maps.Marker({
+    position: { lat: 31, lng: 31.37 },
     map: map,
-    title: "iam here",
+    title: "I am here",
   });
 
   function fetchRobotLocation() {
-    fetch("/api/robot-location")
+    fetch("http://192.168.1.19:5000/api/robot-location")
       .then((response) => response.json())
       .then((data) => {
-        marker.setPosition({ lat: data.latitude, lng: data.longitude });
-        map.setCenter({ lat: data.latitude, lng: data.longitude });
+        const newPosition = { lat: data.latitude, lng: data.longitude };
+        map.setCenter(newPosition);
+        marker.setPosition(newPosition);
+        marker.setTitle(`Lat: ${data.latitude}, Lng: ${data.longitude}`);
       })
       .catch((error) => console.error("Error fetching robot location:", error));
   }
-  // to update robot location every 5 seconds
+
   setInterval(fetchRobotLocation, 5000);
 }
 // function fetchSensorData() {

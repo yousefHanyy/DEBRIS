@@ -118,7 +118,13 @@ p {
   object-fit: contain;
   object-position: center;
 }
-
+.thermal-container {
+  display: flex;
+  flex-direction: column;
+}
+.thermal-container h3 {
+  text-align: center;
+}
 .readings-container {
   background-color: #f4f4f4;
   padding: 15px;
